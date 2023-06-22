@@ -3,6 +3,7 @@ import PokemonList from "./pages/pokemons-list";
 import { Link, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import PokemonsDetail from "./pages/pokemon-details";
 import PageNotFound from "./pages/page-not-found";
+import PokemonEdit from "./pages/pokemon-edit";
 
 const App: FunctionComponent = () => {
   return (
@@ -18,8 +19,9 @@ const App: FunctionComponent = () => {
         <Switch>
           <Route exact path="/" component={PokemonList} />
           <Route exact path="/pokemons" component={PokemonList} />
-          <Route path="/pokemons/:id" component={PokemonsDetail} />
-          <Route component={PageNotFound}/>
+          <Route exact path="/pokemons/:id" component={PokemonsDetail} />
+          <Route exact path="/pokemons/edit/:id" component={PokemonEdit} />
+          <Route component={PageNotFound} />
         </Switch>
       </div>
     </Router>
