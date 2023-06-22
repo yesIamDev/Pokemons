@@ -3,6 +3,7 @@ import Pokemon from "../models/pokemon";
 import POKEMONS from "../models/mock-pokemon";
 import PokemonCard from "../components/pokemon-card";
 
+
 const PokemonList: FunctionComponent = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
 
